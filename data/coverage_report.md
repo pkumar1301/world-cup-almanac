@@ -1,7 +1,7 @@
 # WC2026 data pull — coverage report
 
 - Window: **2022-01-01 → 2026-06-10**
-- Rows (one per team per match): **2887**
+- Rows (one per team per match): **2886**
 - Nations covered: **53** (actual qualified 48 + 5 from the provisional list)
 
 ## Column fill rate (the €0 reality)
@@ -48,7 +48,7 @@
 
 | competition | rows |
 |---|---|
-| Friendly | 891 |
+| Friendly | 890 |
 | FIFA World Cup qualification | 709 |
 | UEFA Nations League | 226 |
 | African Cup of Nations | 162 |
