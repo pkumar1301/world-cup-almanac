@@ -1,5 +1,17 @@
 # World Cup Almanac
 
+**Run locally:** open `index.html`, or `python3 -m http.server 8000` and go to http://localhost:8000.
+
+Every men's World Cup from 1930 to 2026 in one dashboard, plus a live Elo and Monte-Carlo forecast for 2026. The data pipeline is standard-library Python, so there's nothing to pip install, and GitHub Actions rebuilds it daily.
+
+## How I built this
+
+- Dashboard: a single `index.html` with vanilla JavaScript, no build step.
+- Pipeline: `tools/build_wc2026_dataset.py` computes Elo from every international since 1872, fits the goal model and runs the Monte-Carlo forecast. Blending in betting-market odds is optional.
+- `.github/workflows/daily-rebuild.yml` reruns the pipeline every day at 09:00 UTC.
+
+---
+
 An interactive FIFA World Cup data almanac (every men's tournament, **1930 → 2026**) **and** a
 near-zero-cost pipeline that computes World-Football Elo from scratch, optionally blends in the
 betting market, and runs a **live** Monte-Carlo forecast of World Cup 2026 with confidence scores.
